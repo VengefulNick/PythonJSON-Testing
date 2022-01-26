@@ -1,44 +1,44 @@
-﻿[
-    {
+﻿{
+    "Geralt": {
         "Name": "Geralt",
         "Alias": "White Wolf",
         "Profession": "Witcher",
         "Hair-Color": "Milk-white",
         "Eye-Color": "Amber"
     },
-    {
+    "Yennefer": {
         "Name": "Yennefer",
         "Alias": "Yen",
         "Profession": "Sorceress",
         "Hair-Color": "Black",
         "Eye-Color": "Violet"
     },
-    {
+    "Julian Alfred Pankratz": {
         "Name": "Julian Alfred Pankratz",
         "Alias": "Dandelion",
         "Profession": "Bard",
         "Hair-Color": "Blond",
         "Eye-Color": "Cornflower blue"
     },
-    {
+    "Triss": {
         "Name": "Triss",
         "Alias": "",
         "Profession": "Sorceress",
         "Hair-Color": "Chestnut",
         "Eye-Color": "Cornflower blue"
     },
-    {
+    "Vesemir": {
         "Name": "Vesemir",
         "Alias": "",
         "Profession": "Witcher",
         "Hair-Color": "Grey",
         "Eye-Color": "Amber"
     },
-    {
+    "Cirilla": {
         "Name": "Cirilla",
         "Alias": "Ciri",
         "Profession": "Witcher",
         "Hair-Color": "Ashen-gray",
         "Eye-Color": "Emerald-green"
     }
-]
+}

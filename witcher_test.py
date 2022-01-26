@@ -3,6 +3,8 @@ import json
 import csv
 from encodings import utf_8_sig
 
+from pkg_resources import ensure_directory
+
 def main():
     show_menu = True
     
@@ -15,7 +17,6 @@ def main():
         print('6. Exit')
         
         menu_select = input('Pick an option from menu: ')
-        
         
         if menu_select == '1':
             csv_to_json()
@@ -41,12 +42,12 @@ def main():
     
 def csv_to_json():
     print('\nRead CSV to Json\n')
-    json_data = []
+    json_data = {}
     
     with open('witcherraw.csv', 'r', encoding='utf-8-sig') as csvfile:
         csvData = csv.DictReader(csvfile)
         for row in csvData:
-            json_data.append(row)
+            json_data[row['Name']] = row
             
         print('\tRead Successful!\n')
     
@@ -60,17 +61,12 @@ def show_json():
     with open('witcher.json', 'r', encoding='utf-8-sig') as file:
         read = json.load(file)
     
-    for row in read:
-        print(row)
-
+    for i in read:
+        print(i)
+    print()
 
 def add_char(new):
     print('\nAdd new character!\n')
-    
-    with open('witcher.json', 'r+', encoding='utf-8-sig') as jsonfile:
-        data = json.load(jsonfile)
-        data.append(new)
-        
 
 
 def del_char():

@@ -14,7 +14,7 @@ def main():
         print('5. Save to CSV')
         print('6. Exit')
         
-        menu_select = input('Välj ett alternativ från menyn: ')
+        menu_select = input('Pick an option from menu: ')
         
         
         if menu_select == '1':
@@ -24,7 +24,8 @@ def main():
             show_json()
             
         elif menu_select == '3':
-            add_char()
+            x = {"Name": "Calanthe", "Alias": "Lioness", "Profession": "Queen", "Hair-Color": "Black", "Eye-Color": "Blue"}
+            add_char(x)
 
         elif menu_select == '4':
             del_char()
@@ -35,11 +36,11 @@ def main():
         elif menu_select == '6':
             show_menu = False
         else:
-            print('Ogiltigt val, välj ett alternativ från menyn.')
+            print('Invalid option, try again!')
     
     
 def csv_to_json():
-    print('Read CSV to Json')
+    print('\nRead CSV to Json\n')
     json_data = []
     
     with open('witcherraw.csv', 'r', encoding='utf-8-sig') as csvfile:
@@ -47,15 +48,15 @@ def csv_to_json():
         for row in csvData:
             json_data.append(row)
             
-        print('Read Successful!')
+        print('\tRead Successful!\n')
     
     with open('witcher.json', 'w', encoding='utf-8-sig') as jsonfile:
         jsonString = json.dumps(json_data, ensure_ascii=False, indent=4)
         jsonfile.write(jsonString)
-
+        print('\tWrite Successful!\n')
 
 def show_json():
-    print('Show json content')
+    print('\nShow JSON Content\n')
     with open('witcher.json', 'r', encoding='utf-8-sig') as file:
         read = json.load(file)
     
@@ -63,16 +64,21 @@ def show_json():
         print(row)
 
 
-def add_char():
-    print('add new character!')
+def add_char(new):
+    print('\nAdd new character!\n')
+    
+    with open('witcher.json', 'r+', encoding='utf-8-sig') as jsonfile:
+        data = json.load(jsonfile)
+        data.append(new)
+        
 
 
 def del_char():
-    print('delete character!')
+    print('\nDelete character!\n')
 
 
 def save_to_csv():
-    print('Save json to CSV')
+    print('\nSave json to CSV\n')
 
 
 main()

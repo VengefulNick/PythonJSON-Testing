@@ -2,6 +2,7 @@ from fileinput import filename
 import json
 import csv
 from encodings import utf_8_sig
+from textwrap import indent
 
 from pkg_resources import ensure_directory
 
@@ -67,6 +68,10 @@ def show_json():
 
 def add_char(new):
     print('\nAdd new character!\n')
+
+    with open('witcher.json', 'w+', encoding='utf-8-sig') as jsonfile:
+        data = json.load(jsonfile)
+        data.append(new)
 
 
 def del_char():

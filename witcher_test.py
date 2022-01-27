@@ -2,6 +2,7 @@
 import json
 import csv
 from encodings import utf_8
+from textwrap import indent
 
 def main():
     show_menu = True
@@ -12,7 +13,7 @@ def main():
         print('3. Add')
         print('4. Delete')
         print('5. Save to CSV')
-        print('6. Exit')
+        print('6. Exit\n')
         
         menu_select = input('Pick an option from menu: ')
         
@@ -66,9 +67,9 @@ def csv_to_json():
         print('\tRead Successful!\n')
     
     with open('witcher.json', 'w', encoding='utf-8') as jsonfile:
-        jsonString = json.dumps(json_data, ensure_ascii=False, indent=4)
-        jsonfile.write(jsonString)
+        json.dump(json_data, jsonfile, ensure_ascii=False, indent=4)
         print('\tWrite Successful!\n')
+
 
 def show_json():
     print('\nShow JSON Content\n')
@@ -78,6 +79,7 @@ def show_json():
     for i in read:
         print(i)
     print()
+
 
 def add_char(new):
     print('\nAdd new character!\n')

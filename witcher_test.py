@@ -3,8 +3,6 @@ import json
 import csv
 from encodings import utf_8
 
-from numpy import eye
-
 def main():
     show_menu = True
     

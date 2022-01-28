@@ -89,11 +89,13 @@ def del_char():
         data = json.load(jsonfile)
         
         for index, value in enumerate(data):
-            print(index, value)
-        print('\nEnter index of character you want to delete: ')
+            print(f'{index}: {value}')
+        print('\nEnter index of character you want to delete:')
         del_input = input_num()
         data.pop(del_input)
         print(f'\n\tSuccessfully removed character on index: {del_input}')
+        
+        
         
     with open('witcher.json', 'w', encoding='utf-8') as jsonfile:
         json.dump(data, jsonfile, indent=4)
@@ -130,7 +132,7 @@ def mainmenu():
 «---------------------»
     """)
 
-def input_new(): 
+def input_new():
     print('Enter name: ')
     name_input = input_str()
     print('Enter alias: ')
@@ -147,7 +149,7 @@ def input_new():
     return new
 
 
-def input_str():
+def input_str():        # Input checker for empty string.
     str = input('')
     if(len(str)):
         return str
@@ -156,7 +158,7 @@ def input_str():
         return input_str()
 
 
-def input_num():
+def input_num():        # Inputchecker for integer.
     int_input = input('Enter number: ')
     try:
         return int(int_input)

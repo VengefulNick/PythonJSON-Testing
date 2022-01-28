@@ -71,7 +71,7 @@ def add_char(new):
     print('\nAdd new character!\n')
     with open('witcher.json', 'r', encoding='utf_8') as jsonfile:
         read = json.load(jsonfile)
-    
+
     with open('witcher.json', 'w', encoding='utf-8') as jsonfile:
         data = read
         print('\n\tReading old content OK!')
@@ -87,16 +87,18 @@ def del_char():
     print('\nDelete character!\n')
     with open('witcher.json', 'r', encoding='utf-8') as jsonfile:
         data = json.load(jsonfile)
-        
+
         for index, value in enumerate(data):
             print(f'{index}: {value}')
         print('\nEnter index of character you want to delete:')
         del_input = input_num()
-        data.pop(del_input)
-        print(f'\n\tSuccessfully removed character on index: {del_input}')
-        
-        
-        
+        try:
+            data.pop(del_input)
+            print(f'\n\tSuccessfully removed character on index: {del_input}')
+        except IndexError:
+            print('Number is not in list, try again!')
+
+
     with open('witcher.json', 'w', encoding='utf-8') as jsonfile:
         json.dump(data, jsonfile, indent=4)
 
@@ -122,28 +124,28 @@ def save_to_csv():
 """ Extra functions """
 def mainmenu():
     print("""
-«---------------------»
- |   1. CSV to Json  |
- |   2. Show Json    |
- |   3. Add          |
- |   4. Delete       |
- |   5. Save to CSV  |
- |   0. Exit         |
-«---------------------»
+«----------------------»
+ |   1. CSV to Json   |
+ |   2. Show Json     |
+ |   3. Add           |
+ |   4. Delete        |
+ |   5. Save to CSV   |
+ |   0. Exit          |
+«----------------------»
     """)
 
 def input_new():
-    print('Enter name: ')
+    print('Enter name:')
     name_input = input_str()
-    print('Enter alias: ')
+    print('Enter alias:')
     alias_input = input('')
-    print('Enter profession: ')
+    print('Enter profession:')
     prof_input = input_str()
-    print('Enter hair-color: ')
+    print('Enter hair-color:')
     hair_input = input_str()
-    print('Enter eye-color: ')
+    print('Enter eye-color:')
     eye_input = input_str()
-       
+   
     new = {'Name': name_input, 'Alias': alias_input, 'Profession': prof_input, 'Hair-Color': hair_input, 'Eye-Color': eye_input}
     # new = {"Name": "Calanthe", "Alias": "Lioness", "Profession": "Queen", "Hair-Color": "Black", "Eye-Color": "Blue"}
     return new

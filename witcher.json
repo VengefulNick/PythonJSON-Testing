@@ -1,4 +1,4 @@
-﻿[
+[
     {
         "Name": "Geralt",
         "Alias": "White Wolf",
@@ -7,7 +7,7 @@
         "Eye-Color": "Amber"
     },
     {
-        "Name": "Yennefer of Vengerberg",
+        "Name": "Yennefer",
         "Alias": "Yen",
         "Profession": "Sorceress",
         "Hair-Color": "Black",
@@ -21,7 +21,7 @@
         "Eye-Color": "Cornflower blue"
     },
     {
-        "Name": "Triss Merigold",
+        "Name": "Triss",
         "Alias": "",
         "Profession": "Sorceress",
         "Hair-Color": "Chestnut",
@@ -35,7 +35,7 @@
         "Eye-Color": "Amber"
     },
     {
-        "Name": "Cirilla Fiona Elen Riannon",
+        "Name": "Cirilla",
         "Alias": "Ciri",
         "Profession": "Witcher",
         "Hair-Color": "Ashen-gray",
@@ -49,14 +49,14 @@
         "Eye-Color": "Blue"
     },
     {
-        "Name": "Eskel",
+        "Name": "Lambert",
         "Alias": "",
         "Profession": "Witcher",
         "Hair-Color": "Brown",
         "Eye-Color": "Brown"
     },
     {
-        "Name": "Lambert",
+        "Name": "Eskel",
         "Alias": "",
         "Profession": "Witcher",
         "Hair-Color": "Brown",

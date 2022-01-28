@@ -1,20 +1,13 @@
 
 import json
 import csv
-from encodings import utf_8
-from textwrap import indent
+
 
 def main():
     show_menu = True
     
     while show_menu:
-        print('1. CSV to Json')
-        print('2. Show Json')
-        print('3. Add')
-        print('4. Delete')
-        print('5. Save to CSV')
-        print('6. Exit\n')
-        
+        mainmenu()
         menu_select = input('Pick an option from menu: ')
         
         if menu_select == '1':
@@ -33,7 +26,7 @@ def main():
         elif menu_select == '5':
             save_to_csv()
             
-        elif menu_select == '6':
+        elif menu_select == '0' or 'exit':
             show_menu = False
         else:
             print('Invalid option, try again!')
@@ -52,7 +45,7 @@ def csv_to_json():
             
                     # Objects in Object / Dicts in Dict
 #    json_data = {}  
-#    with open('witcher.csv', 'r', encoding='utf-8-sig') as csvfile:
+#    with open('witcher.csv', 'r', encoding='utf-8') as csvfile:
 #        csvData = csv.DictReader(csvfile)
 #        for row in csvData:
 #            json_data[row['Name']] = row
@@ -125,6 +118,17 @@ def save_to_csv():
 
 
 """ Extra functions """
+def mainmenu():
+    print("""
+«---------------------»
+ |   1. CSV to Json  |
+ |   2. Show Json    |
+ |   3. Add          |
+ |   4. Delete       |
+ |   5. Save to CSV  |
+ |   0. Exit         |
+«---------------------»
+    """)
 
 def input_new(): 
     print('Enter name: ')

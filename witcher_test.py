@@ -26,7 +26,7 @@ def main():
         elif menu_select == '5':
             save_to_csv()
             
-        elif menu_select == '0' or 'exit':
+        elif menu_select == '0':
             show_menu = False
         else:
             print('Invalid option, try again!')
@@ -34,7 +34,7 @@ def main():
 """ Menu Functions """
  
 def csv_to_json():
-    print('\nRead CSV to Json\n')
+    print('Read CSV to Json\n')
 
                     # Objects in Array / Dicts in List
     json_data = []
@@ -153,7 +153,7 @@ def input_new():
 
 def input_str():        # Input checker for empty string.
     str = input('')
-    if(len(str)):
+    if(len(str.strip())):
         return str
     else:
         print('Input cannot be empty!')

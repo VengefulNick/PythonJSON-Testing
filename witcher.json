@@ -61,5 +61,26 @@
         "Profession": "Witcher",
         "Hair-Color": "Brown",
         "Eye-Color": "Brown"
+    },
+    {
+        "Name": "Mousesack",
+        "Alias": "Ermion",
+        "Profession": "Druid",
+        "Hair-Color": "Flaxen",
+        "Eye-Color": "Black"
+    },
+    {
+        "Name": "Eredin Br\u00e9acc Glas",
+        "Alias": "Sparrowhawk",
+        "Profession": "King of the Wild Hunt",
+        "Hair-Color": "Black",
+        "Eye-Color": "Green"
+    },
+    {
+        "Name": "Phillip Strenger",
+        "Alias": "The Bloody Baron",
+        "Profession": "Baron of Crow's Perch",
+        "Hair-Color": "White and grey",
+        "Eye-Color": "Brown"
     }
 ]

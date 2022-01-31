@@ -41,7 +41,6 @@ def main():
 Menu Functions
 """
 
-
 def csv_to_json():  # 1
     print('Read CSV to Json\n')
 
@@ -73,6 +72,7 @@ def show_json():    # 2
     
     for row in read:
         print(row)
+
 
 def add_char(new):  # 3
     print('\nAdd new character!\n')
@@ -170,6 +170,7 @@ def new_property(): #6
     with open('witcher.json', 'w', encoding='utf-8') as jsonfile:
         json.dump(data, jsonfile, indent=4)
 
+
 def save_to_csv(): #9
     print('\nSave json to CSV\n')
     with open('witcher.json', 'r', encoding='utf-8') as jsonfile:
@@ -256,5 +257,6 @@ def input_num():        # Inputchecker for integer.
 """
 Run Program
 """
+
 
 main()
